@@ -1,0 +1,66 @@
+
+
+<head>
+        <link rel="stylesheet" href="css/input.css">
+<title>input Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-1.10.2.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+ <script>
+    if (datefield.type!="date"){ //if browser doesn't support input type="date", initialize date picker widget:
+       jQuery(function($){ //on document.ready
+           $('#dateofBirth').datepicker();
+       })
+    }
+ </script>
+  </head>
+	
+	<form id="signup" action="login" method="post">		
+		<fieldset>
+			<legend>Food details</legend>
+			
+			<ol>
+				<li>
+					<label for="empfirstName">Food Name *</label> 
+					<input type="text" id="empfirstName" name="empfirstName" ng-model = "empfirstName" placeholder="Full name" required />
+				</li>
+			
+				<li><label for="dateofBirth">Buy Date * </label>
+            <input  placeholder="mm/dd/yyyy" value="" type="date" id="dateofBirth" name="dateofBirth"  required>
+ 
+              </li>
+              <li><label for="dateofBirth">Used by Date * </label>
+                <input  placeholder="mm/dd/yyyy" value="" type="date" id="dateofBirth" name="dateofBirth"  required>
+     
+                  </li>
+                  <li><label for="dateofBirth">Best by Date * </label>
+                    <input  placeholder="mm/dd/yyyy" value="" type="date" id="dateofBirth" name="dateofBirth" >
+         
+                      </li>
+			
+				
+				<li>
+					<label for="state">Type</label>
+					<select name="state" id="state">
+					<option>Meat</option>
+                      <option>Seafood</option>
+                      <option>Egg</option>
+                       <option>Dairy</option>
+                       <option>Fruits</option>
+                       <option>Vegetables</option>
+                       <option>Drinks</option>
+                        
+					</select>
+				</li>
+
+      
+			</ol>
+		</fieldset>
+		
+		
+		
+		<input type="submit" value="Submit" />
+
+	</form>
+	
+
