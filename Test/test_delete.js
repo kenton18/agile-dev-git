@@ -17,23 +17,29 @@ var food;
     });
 
 describe('Delete Record', function() {
+    this.timeout(0);
     it('Deletes one record from MongoDB', function (done) {
        FoodModel.findOneAndDelete({
-            Food_Name: 'Orange',
+            Food_Name: 'Orangeee',
             Buy_Date: 'a',
             Expired_date:'b',
             best_before_date: 'c',
             Food_type: 'd'
-        }).then(FoodModel.findOne({
-            Food_Name: 'Orange',
-            Buy_Date: 'a',
-            Expired_date:'b',
-            best_before_date: 'c',
-            Food_type: 'd'
-        }).then(function(result){
-            assert(result === null);
+        }, function(result){
+
+            FoodModel.find({
+                Food_Name: 'Orange',
+                Buy_Date: 'a',
+                Expired_date:'b',
+                best_before_date: 'c',
+                Food_type: 'd'
+            }, function(err, result){
+                
+                if(result.length) {
+                    assert(false);
+                }
+            })
         })
-    );
     done();
     });
 });
