@@ -28,6 +28,7 @@ jobs:
 
       - run: npm install
       - run: npm install mocha
+      
 
       - save_cache:
           paths:
@@ -35,6 +36,6 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: mocha
+      - run: npm test
 
 
