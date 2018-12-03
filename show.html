@@ -1,0 +1,193 @@
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>-->
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/show.css"> <!-- Resource style -->
+	<!--<script src="js/modernizr.js"></script>  Modernizr -->
+  	
+	<title>Filters</title>
+</head>
+<body>
+
+	<main class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder"> 
+						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+					</li> 
+					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
+					<li class="filter" data-filter=".false"><a href="#0" data-type="false">Not Expired</a></li>
+					<li class="filter" data-filter=".true"><a href="#0" data-type="true">Expired</a></li>
+					
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
+
+		<section class="cd-gallery">
+			<ul>
+				<li class="mix true Meat">
+					<a class="card" >
+						<span class="card-summary">Meat Expired
+						</span>
+					</a>	
+				</li>
+				<li class="mix true Seafood">
+					<a class="card" >
+						<span class="card-summary">Seafood Expired
+						</span>
+					</a>
+				</li>
+				<li class="mix false Egg">
+					<a class="card" >
+						<span class="card-summary">Egg normal
+						</span>
+					</a>
+				</li>
+				
+				<li class="mix false Dairy">
+					<a class="card" >
+						<span class="card-summary">Dairy normal
+						</span>
+					</a>
+				</li>
+				
+				<li class="mix true Fruits">
+					<a class="card" >
+						<span class="card-summary">Fruits Expired
+						</span>
+					</a>
+				</li>
+				
+				<li class="mix false Vegetables">
+					<a class="card" >
+						<span class="card-summary">Vegetables normal
+						</span>
+					</a>
+				</li>
+				
+				<li class="mix true Drinks">
+					<a class="card" >
+						<span class="card-summary">Drinks Expired
+						</span>
+					</a>
+				</li>
+				
+				<li class="mix false Meat">
+					<a class="card" >
+						<span class="card-summary">Meat normal
+						</span>
+					</a>
+				</li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+				<li class="gap"></li>
+
+			</ul>
+			<div class="cd-fail-message">No results found</div>
+		</section> <!-- cd-gallery -->
+
+		<div class="cd-filter">
+			<form>
+				<div class="cd-filter-block">
+					<h4>Search</h4>
+					
+					<div class="cd-filter-content">
+						<input type="search" placeholder="">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Food Type</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter=".Meat" type="checkbox" id="checkbox1">
+			    			<label class="checkbox-label" for="checkbox1">Meat</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".Seafood" type="checkbox" id="checkbox2">
+							<label class="checkbox-label" for="checkbox2">Seafood</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".Egg" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Egg</label>
+						</li>
+						
+						<li>
+							<input class="filter" data-filter=".Dairy" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Dairy</label>
+						</li>
+						
+						<li>
+							<input class="filter" data-filter=".Fruits" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Fruits</label>
+						</li>
+						
+						<li>
+							<input class="filter" data-filter=".Vegetables" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Vegetables</label>
+						</li>
+						
+						<li>
+							<input class="filter" data-filter=".Drinks" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Drinks</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<!--<div class="cd-filter-block">
+					<h4>Select</h4>
+					
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Choose an option</option>
+								<option value=".option1">Option 1</option>
+								<option value=".option2">Option 2</option>
+								<option value=".option3">Option 3</option>
+								<option value=".option4">Option 4</option>
+							</select>
+						</div> <!-- cd-select -->
+					<!--</div> <!-- cd-filter-content -->
+				<!--</div> <!-- cd-filter-block -->
+
+				<!--<div class="cd-filter-block">
+					<h4>Radio buttons</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
+							<label class="radio-label" for="radio1">All</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
+							<label class="radio-label" for="radio2">Choice 2</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+							<label class="radio-label" for="radio3">Choice 3</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				<!--</div> <!-- cd-filter-block -->
+			</form>
+
+			<a href="#0" class="cd-close">Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Filters</a>
+	</main> <!-- cd-main-content -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/jquery.mixitup.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
