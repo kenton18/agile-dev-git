@@ -1,0 +1,35 @@
+sudo: required
+
+language: node_js
+
+node_js:
+  - 8
+
+services:
+  - docker
+
+before_script:
+  - docker run -d -p 27017:27017 mongo:3
+  - docker ps -a
+
+install:
+  - npm install mocha
+  - npm install chai
+  - npm install -g codecov
+script:
+  - MONGODB_URL=mongodb://localhost/connect-mongo-test mocha --exit
+  - codecov
+ 
+
+
+after_success:
+  - git init
+  - git config user.name "kenton18"
+  - git config user.email "wilsom20012@gmail.com"
+  - git add .
+  - git commit -m "auto depoly"
+  - git config --global --unset https.proxy
+  - git pull --force --quiet "https://${GH_TOKEN}@github.com/kenton18/test" master:master
+branches:
+  only: 
+    - master
